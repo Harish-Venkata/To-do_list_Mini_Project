@@ -13,6 +13,7 @@ addBtn.addEventListener("click", function () {
 
 const savedContent = localStorage.getItem("localData");
 cart.innerHTML = savedContent;
+// Added localStorage Content
 
 cart.addEventListener("click", function (e) {
   e.target.remove();

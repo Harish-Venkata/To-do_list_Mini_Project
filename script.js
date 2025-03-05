@@ -8,7 +8,11 @@ addBtn.addEventListener("click", function () {
   cart.appendChild(lists);
   inputText.value = " ";
   lists.style.listStyleType = "none";
+  localStorage.setItem("localData", cart.innerHTML);
 });
+
+const savedContent = localStorage.getItem("localData");
+cart.innerHTML = savedContent;
 
 cart.addEventListener("click", function (e) {
   e.target.remove();
